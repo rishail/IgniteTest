@@ -1,7 +1,6 @@
-package com.example.ignitetest
+package com.example.ignitetest.view
 
 
-import AddTODOTASK
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -10,11 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ignitetest.databinding.ActivityDashboardBinding
+import com.example.ignitetest.R
+import com.example.ignitetest.model.DBHelper
+import com.example.ignitetest.model.ToDoAdapter
+import com.example.ignitetest.model.Todo
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
 
-class DashboardActivity : AppCompatActivity(),OnDialogClickListener {
+class DashboardActivity : AppCompatActivity(), OnDialogClickListener {
 
     private var fab: FloatingActionButton? = null
    private var button:Button?=null

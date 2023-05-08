@@ -15,14 +15,14 @@
             android:name=".AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name=".view.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".view.SignUp"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".view.MainActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

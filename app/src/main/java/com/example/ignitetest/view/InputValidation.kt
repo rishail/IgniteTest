@@ -1,4 +1,4 @@
-package com.example.ignitetest
+package com.example.ignitetest.view
 
 import android.app.Activity
 import android.content.Context

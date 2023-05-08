@@ -1,12 +1,13 @@
-package com.example.ignitetest
+package com.example.ignitetest.view
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ignitetest.R
 import com.example.ignitetest.databinding.ActivityMainBinding
+import com.example.ignitetest.model.DBHelper
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.textfield.TextInputEditText
 
 
 class MainActivity : AppCompatActivity(),View.OnClickListener {

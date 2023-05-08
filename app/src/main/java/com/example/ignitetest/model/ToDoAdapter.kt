@@ -1,6 +1,6 @@
-package com.example.ignitetest
+package com.example.ignitetest.model
 
-import AddTODOTASK
+import com.example.ignitetest.view.AddTODOTASK
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ignitetest.view.DashboardActivity
+import com.example.ignitetest.R
 
 class ToDoAdapter(myDB: DBHelper, private val activity: DashboardActivity) :
     RecyclerView.Adapter<ToDoAdapter.MyViewHolder>() {

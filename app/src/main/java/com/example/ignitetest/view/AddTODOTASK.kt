@@ -1,3 +1,5 @@
+package com.example.ignitetest.view
+
 import android.app.Activity
 import android.content.DialogInterface
 import android.graphics.Color
@@ -9,10 +11,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import com.example.ignitetest.DBHelper
-import com.example.ignitetest.OnDialogClickListener
+import com.example.ignitetest.model.DBHelper
 import com.example.ignitetest.R
-import com.example.ignitetest.Todo
+import com.example.ignitetest.model.Todo
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class AddTODOTASK : BottomSheetDialogFragment() {

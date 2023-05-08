@@ -1,4 +1,4 @@
-package com.example.ignitetest
+package com.example.ignitetest.view
 
 import android.content.DialogInterface
 

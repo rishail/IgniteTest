@@ -1,4 +1,4 @@
-package com.example.ignitetest
+package com.example.ignitetest.view
 
 import android.app.AlertDialog
 import android.graphics.Canvas
@@ -6,6 +6,8 @@ import android.graphics.Color
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ignitetest.R
+import com.example.ignitetest.model.ToDoAdapter
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 class RecyclerViewTouchHelper(adapter: ToDoAdapter) :

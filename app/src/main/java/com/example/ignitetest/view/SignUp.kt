@@ -1,10 +1,12 @@
-package com.example.ignitetest
+package com.example.ignitetest.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.ignitetest.databinding.ActivityMainBinding
+import com.example.ignitetest.R
 import com.example.ignitetest.databinding.ActivitySignUpBinding
+import com.example.ignitetest.model.DBHelper
+import com.example.ignitetest.model.User
 import com.google.android.material.snackbar.Snackbar
 
 class SignUp : AppCompatActivity(), View.OnClickListener {
@@ -45,16 +47,24 @@ class SignUp : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun postDataToSQLite() {
-        if (!inputValidation.isInputEditTextFilled(binding.textInputEditTextName, binding.textInputLayoutName, getString(R.string.error_message_name))) {
+        if (!inputValidation.isInputEditTextFilled(binding.textInputEditTextName, binding.textInputLayoutName, getString(
+                R.string.error_message_name
+            ))) {
             return
         }
-        if (!inputValidation.isInputEditTextFilled(binding.textInputEditTextEmail, binding.textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextFilled(binding.textInputEditTextEmail, binding.textInputLayoutEmail, getString(
+                R.string.error_message_email
+            ))) {
             return
         }
-        if (!inputValidation.isInputEditTextEmail(binding.textInputEditTextEmail, binding.textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextEmail(binding.textInputEditTextEmail, binding.textInputLayoutEmail, getString(
+                R.string.error_message_email
+            ))) {
             return
         }
-        if (!inputValidation.isInputEditTextFilled(binding.textInputEditTextPassword, binding.textInputLayoutPassword, getString(R.string.error_message_password))) {
+        if (!inputValidation.isInputEditTextFilled(binding.textInputEditTextPassword, binding.textInputLayoutPassword, getString(
+                R.string.error_message_password
+            ))) {
             return
         }
         if (!inputValidation.isInputEditTextMatches(binding.textInputEditTextPassword,binding.textInputEditTextConfirmPassword,

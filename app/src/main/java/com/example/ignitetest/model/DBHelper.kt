@@ -1,4 +1,4 @@
-package com.example.ignitetest
+package com.example.ignitetest.model
 
 import android.annotation.SuppressLint
 import android.app.DownloadManager.*
@@ -16,8 +16,6 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
     private val COL_1 = "ID"
     private val COL_2 = "TASK"
     private val COL_3 = "STATUS"
-
-
 
     private val CREATE_USER_TABLE = ("CREATE TABLE " + TABLE_USER + "("
             + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_USER_NAME + " TEXT,"
@@ -104,7 +102,8 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
         val sortOrder = "$COLUMN_USER_NAME ASC"
         val userList = ArrayList<User>()
         val db = this.readableDatabase
-        val cursor = db.query(TABLE_USER,
+        val cursor = db.query(
+            TABLE_USER,
             columns,
             null,
             null,
@@ -132,7 +131,7 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
         values.put(COLUMN_USER_NAME, user.name)
         values.put(COLUMN_USER_EMAIL, user.email)
         values.put(COLUMN_USER_PASSWORD, user.password)
-     
+
         db.insert(TABLE_USER, null, values)
         db.close()
     }
@@ -144,7 +143,8 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
         values.put(COLUMN_USER_EMAIL, user.email)
         values.put(COLUMN_USER_PASSWORD, user.password)
 
-        db.update(TABLE_USER, values, "$COLUMN_USER_ID = ?",
+        db.update(
+            TABLE_USER, values, "$COLUMN_USER_ID = ?",
             arrayOf(user.id.toString()))
         db.close()
     }
@@ -153,7 +153,8 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
     fun deleteUser(user: User) {
         val db = this.writableDatabase
 
-        db.delete(TABLE_USER, "$COLUMN_USER_ID = ?",
+        db.delete(
+            TABLE_USER, "$COLUMN_USER_ID = ?",
             arrayOf(user.id.toString()))
         db.close()
     }
@@ -169,7 +170,8 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
         val selectionArgs = arrayOf(email)
 
 
-        val cursor = db.query(TABLE_USER,
+        val cursor = db.query(
+            TABLE_USER,
             columns,
             selection,
             selectionArgs,
@@ -200,7 +202,8 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,null,
         val selectionArgs = arrayOf(email, password)
 
 
-        val cursor = db.query(TABLE_USER,
+        val cursor = db.query(
+            TABLE_USER,
             columns,
             selection,
             selectionArgs,
